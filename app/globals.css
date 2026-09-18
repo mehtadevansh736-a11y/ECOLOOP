@@ -1,0 +1,29 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased min-h-screen selection:bg-brand-100 selection:text-brand-900;
+  }
+}
+
+.glass-card {
+  @apply bg-white/90 backdrop-blur-md border border-slate-200/80 shadow-sm rounded-2xl;
+}
+
+.soft-card {
+  @apply bg-white border border-slate-100 shadow-sm rounded-2xl transition-all duration-200 hover:shadow-md;
+}
+
+.gradient-hero-bg {
+  background: radial-gradient(circle at top center, rgba(209, 250, 229, 0.4) 0%, rgba(248, 250, 252, 1) 70%);
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
